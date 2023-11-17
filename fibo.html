@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Result</title>
+    <style>
+        body {
+            font-family: 'didot';
+            background-color: #FFCACC;
+            text-align: center;
+            margin: 50px;
+        }
+
+        header {
+            background-color: #FF9B9B;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #FF9B9B;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fibonacci Result</h1>
+    </header>
+
+    <section>
+        <p><strong>Length:</strong> {{ length }}</p>
+        <p><strong>Result:</strong> {{ sequence | join(' ') }}</p>
+    </section>
+</body>
+</html>

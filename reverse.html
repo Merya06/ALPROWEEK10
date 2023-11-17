@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Text</title>
+    <style>
+        body {
+            font-family:'didot';
+            background-color: #A8A196;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            font-family: 'didot';
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        input, button {
+            font-size: 18px;
+            margin: 10px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            font-family: 'didot';
+            background-color: #352F44;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5C5470;
+        }
+
+        #output {
+            font-size: 20px;
+            font-family: 'didot';
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #FAF0E6;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #inputText {
+            background-color: #FAF0E6;
+            font-family: 'didot';
+        }
+    </style>
+</head>
+<body>
+    <h1>Reverse Text</h1>
+    <input type="text" id="inputText" placeholder="Enter text">
+    <button onclick="reverseText()">Reverse</button>
+    <div id="output"></div>
+
+    <script>
+        function reverseText() {
+            var inputText = document.getElementById('inputText').value;
+            var reversedText = reverseString(inputText);
+            document.getElementById('output').innerHTML = '<strong>Reversed Text:</strong> ' + reversedText;
+        }
+
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+    </script>
+</body>
+</html>

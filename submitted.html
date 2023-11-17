@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submitted Data</title>
+  <style>
+    body {
+      background-color: #EBF3E8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .kotak {
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #111111;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #86A789;
+    }
+  </style>
+</head>
+<body>
+  <div class="kotak">
+    <h2>Submitted Data</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>{{ data['name'] }}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{ data['email'] }}</td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>{{ data['age'] }}</td>
+      </tr>
+      <!-- Tambahkan baris dan kolom sesuai kebutuhan -->
+    </table>
+  </div>
+</body>
+</html>

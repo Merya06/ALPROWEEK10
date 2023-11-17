@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <style>
+        body {
+            font-family: 'didot';
+            background-color: #F3EEEA;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            max-width: 600px;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            background-color: #EBE3D5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        p {
+            color: #777;
+        }
+
+        a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #776B5D;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #B0A695;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Praktikum Alpro WEEK 10</h1>
+        <hr>
+        <h2>Hello, iam Meri!</h2>
+        <p>This is the catalog of my website!!</p>
+        <p>
+            <a href="{{ url_for('cv') }}">CV</a>
+            <a href="{{ url_for('form') }}">Submit Form</a>
+            <a href="{{ url_for('bio') }}">Biodata</a>
+            <a href="{{ url_for('fibo') }}">Bilangan Fibonacci</a>
+            <a href="{{ url_for('port') }}">Portofolio</a>
+            <a href="{{ url_for('csv_to_json') }}">Covert CSV to JSON</a>
+            <a href="{{ url_for('kalku') }}">Kalkulator</a>
+            <a href="{{ url_for('reverse') }}">Reverse text</a>
+        </p>
+    </div>
+</body>
+</html>
