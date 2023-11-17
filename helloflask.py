@@ -31,9 +31,9 @@ def port():
 @apphello.route('/fibonacci', methods=['GET', 'POST'])
 def fibo():
     if request.method == 'POST':
-        # Ambil nilai input dari formulir
+        # Mengambil nilai input dari formulir
         length = int(request.form['length'])
-        # Hitung deret Fibonacci
+        # Menghitung deret Fibonacci
         fibonacci_sequence = generate_fibonacci(length)
         return render_template('fibo.html', length=length, sequence=fibonacci_sequence)
     return render_template('fiboInput.html')
@@ -49,24 +49,31 @@ def generate_fibonacci(length):
 
 @apphello.route('/csv_to_json')
 def csv_to_json():
+    # Menyimpan data csv dalam bentuk dictionaries
     csv_data = []
+    # Membuka file csv dengan mode baca
     with open('data_titanic.csv', 'r') as file:
+        # Membaca setiap baris sebagai dictionary
         reader = csv.DictReader(file)
         for row in reader:
+            # Menambahkan setiap baris sebagai dictionary ke csv_data
             csv_data.append(row)
+            # Melakukan konversi csv_data ke format json
     return json.dumps(csv_data)
 
 from flask import request
-
+# Decorator yang mendukung metode HTTP get dan post
 @apphello.route('/form', methods=['GET', 'POST'])
 def form():
     if request.method == 'POST':
+        # Membuat dictionary yang berisi data yang diambil dari form yang dikirim
         submitted_data = {
             'name': request.form['name'],
             'email': request.form['email'],
             'age': request.form['age']
             # tambahkan field lainnya sesuai kebutuhan
         }
+        # Menampilkan halaman 
         return render_template('submitted.html', data=submitted_data)
     return render_template('form.html')
 
